@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "FinePrint — Gemma 3 Privacy & Terms Grader",
+  "version": "1.0",
+  "description": "1-Click Terms & Conditions Trap Finder powered locally by Open-Source Gemma 3 (4B).",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:11434/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

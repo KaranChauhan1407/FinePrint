@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 350px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      margin: 0;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 10px;
+    }
+    .title { font-size: 16px; font-weight: 700; color: #38bdf8; }
+    .badge {
+      font-size: 11px;
+      background: #1e293b;
+      padding: 4px 8px;
+      border-radius: 12px;
+      color: #34d399;
+      border: 1px solid #059669;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 14px;
+      padding: 11px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn:disabled { background: #475569; cursor: wait; }
+    .score-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #1e293b;
+      text-align: center;
+      border: 1px solid #ef4444;
+    }
+    .grade { font-size: 36px; font-weight: 800; color: #ef4444; margin: 2px 0; }
+    .summary { font-size: 12px; color: #cbd5e1; }
+    .card {
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+      font-size: 12.5px;
+      line-height: 1.4;
+      background: #1e293b;
+    }
+    .red { border-left: 4px solid #ef4444; }
+    .yellow { border-left: 4px solid #eab308; }
+    .green { border-left: 4px solid #22c55e; }
+    .footer {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #64748b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="title">🛡️ FinePrint Shield</span>
+    <span class="badge">● gemma3:4b Local</span>
+  </div>
+
+  <button id="scanBtn" class="btn">🔍 Scan Page & Highlight Traps</button>
+
+  <div id="resultArea" class="score-box">
+    <div style="font-size: 11px; color: #94a3b8; letter-spacing: 0.5px;">PRIVACY & FAIRNESS GRADE</div>
+    <div id="gradeText" class="grade">D</div>
+    <div id="summaryText" class="summary">High Risk — Multiple legal traps found</div>
+  </div>
+
+  <div id="cardsContainer"></div>
+
+  <div class="footer">🔒 100% On-Device Analysis • Zero Cloud Data Leak</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
