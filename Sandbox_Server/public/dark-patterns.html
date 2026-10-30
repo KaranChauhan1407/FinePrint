@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MegaDeals — Checkout</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f1f5f9; margin: 0; color: #0f172a; }
+    .wrap { max-width: 640px; margin: 30px auto; background: #fff; border-radius: 12px; padding: 24px 28px; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .timer { background: #dc2626; color: #fff; font-weight: 700; padding: 10px; border-radius: 8px; text-align: center; }
+    .line { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e2e8f0; }
+    .fine { font-size: 9px; color: #cbd5e1; }
+    .buy { width: 100%; padding: 14px; background: #16a34a; color: #fff; font-size: 17px; font-weight: 700; border: 0; border-radius: 10px; margin-top: 16px; }
+    .no { display: block; text-align: center; margin-top: 8px; font-size: 11px; color: #94a3b8; }
+    .cookie { position: fixed; bottom: 0; left: 0; right: 0; background: #0f172a; color: #e2e8f0; padding: 16px 24px; display: flex; align-items: center; gap: 16px; }
+    .cookie button { background: #22c55e; color: #fff; border: 0; padding: 12px 28px; font-weight: 700; border-radius: 8px; font-size: 15px; }
+    .cookie a { color: #475569; font-size: 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="timer">⏰ HURRY! Only 02:59 left — 37 people are looking at this deal!</div>
+    <h2>Your order</h2>
+    <div class="line"><span>Wireless Earbuds Pro</span><span>₹1,999</span></div>
+    <div class="line"><span>Premium Protection Plan (auto-added)</span><span>₹499</span></div>
+    <div class="line"><span>Convenience fee</span><span>₹149</span></div>
+    <p><label><input type="checkbox" checked> Share my purchase history with our trusted partners for personalised offers</label></p>
+    <p><label><input type="checkbox" checked> Subscribe me to MegaDeals Prime (₹299/month, renews automatically)</label></p>
+    <button class="buy">Pay ₹2,946 now</button>
+    <a class="no" href="#">No thanks, I prefer paying full price like a fool</a>
+    <p class="fine">By paying you agree to binding arbitration, a non-refundable policy and sharing of your device identifiers with advertising partners.</p>
+  </div>
+  <div class="cookie">
+    <span>We use cookies to improve your experience and for advertising with 800+ partners.</span>
+    <button>Accept all</button>
+    <a href="#">manage options</a>
+  </div>
+</body>
+</html>

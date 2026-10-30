@@ -2,4 +2,7 @@
 *.out
 *.o
 server
+Sandbox_Server/server
 .vscode/
+.DS_Store
+__pycache__/

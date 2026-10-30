@@ -3,93 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    body {
-      width: 350px;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-      margin: 0;
-      padding: 16px;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 10px;
-    }
+    body { width: 380px; font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 14px; }
+    .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 10px; }
     .title { font-size: 16px; font-weight: 700; color: #38bdf8; }
-    .badge {
-      font-size: 11px;
-      background: #1e293b;
-      padding: 4px 8px;
-      border-radius: 12px;
-      color: #34d399;
-      border: 1px solid #059669;
-    }
-    .btn {
-      width: 100%;
-      margin-top: 14px;
-      padding: 11px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 13.5px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .btn:hover { background: #1d4ed8; }
+    .badge { font-size: 11px; background: #1e293b; padding: 4px 8px; border-radius: 12px; border: 1px solid #334155; color: #94a3b8; }
+    .badge.ok { color: #34d399; border-color: #059669; }
+    .badge.bad { color: #f87171; border-color: #b91c1c; }
+    .row { display: flex; gap: 8px; margin-top: 10px; }
+    .row label { flex: 1; font-size: 10.5px; color: #94a3b8; letter-spacing: .4px; }
+    select { width: 100%; margin-top: 3px; background: #1e293b; color: #f8fafc; border: 1px solid #334155; border-radius: 6px; padding: 5px; font-size: 12px; }
+    .btn { flex: 1; padding: 10px 6px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 12.5px; cursor: pointer; }
+    .btn.alt { background: #7c3aed; }
+    .btn:hover { filter: brightness(.92); }
     .btn:disabled { background: #475569; cursor: wait; }
-    .score-box {
-      display: none;
-      margin-top: 14px;
-      padding: 12px;
-      border-radius: 8px;
-      background: #1e293b;
-      text-align: center;
-      border: 1px solid #ef4444;
-    }
-    .grade { font-size: 36px; font-weight: 800; color: #ef4444; margin: 2px 0; }
-    .summary { font-size: 12px; color: #cbd5e1; }
-    .card {
-      padding: 10px;
-      border-radius: 6px;
-      margin-top: 8px;
-      font-size: 12.5px;
-      line-height: 1.4;
-      background: #1e293b;
-    }
-    .red { border-left: 4px solid #ef4444; }
-    .yellow { border-left: 4px solid #eab308; }
-    .green { border-left: 4px solid #22c55e; }
-    .footer {
-      margin-top: 12px;
-      font-size: 11px;
-      color: #64748b;
-      text-align: center;
-    }
+    .score-box { display: none; margin-top: 12px; padding: 12px; border-radius: 8px; background: #1e293b; text-align: center; border: 1px solid #475569; }
+    .grade { font-size: 38px; font-weight: 800; margin: 2px 0; }
+    .summary { font-size: 12.5px; color: #cbd5e1; }
+    .meta { font-size: 10.5px; color: #64748b; margin-top: 6px; }
+    .card { padding: 9px 10px; border-radius: 6px; margin-top: 8px; font-size: 12.5px; line-height: 1.4; background: #1e293b; border-left: 4px solid #475569; }
+    .card.clickable { cursor: pointer; }
+    .card.clickable:hover { background: #273449; }
+    .card .cat { font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: #94a3b8; }
+    .high { border-left-color: #ef4444; }
+    .medium { border-left-color: #eab308; }
+    .safe { border-left-color: #22c55e; }
+    .error { border-left-color: #f97316; white-space: pre-wrap; }
+    code { background: #0b1222; padding: 1px 4px; border-radius: 4px; font-size: 11px; }
+    .section { margin-top: 12px; font-size: 10.5px; color: #94a3b8; letter-spacing: .5px; }
+    .btn.green { background: #16a34a; }
+    .quote { margin-top: 6px; font-size: 11.5px; color: #94a3b8; font-style: italic; border-left: 2px solid #334155; padding-left: 6px; }
+    .actions { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .mini { background: #2563eb; color: #fff; border: 0; border-radius: 6px; padding: 5px 8px; font-size: 11.5px; font-weight: 600; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .mini.ghost { background: #334155; }
+    .note { font-size: 11px; color: #fbbf24; width: 100%; }
+    .verified { font-size: 10px; color: #34d399; border: 1px solid #059669; border-radius: 8px; padding: 0 5px; margin-left: 4px; text-transform: none; }
+    .clickable-q { cursor: pointer; }
+    .footer { margin-top: 12px; font-size: 10.5px; color: #64748b; text-align: center; }
   </style>
 </head>
 <body>
   <div class="header">
-    <span class="title">🛡️ FinePrint Shield</span>
-    <span class="badge">● gemma3:4b Local</span>
+    <span class="title">🛡️ FinePrint</span>
+    <span id="modelBadge" class="badge">● checking Ollama…</span>
   </div>
 
-  <button id="scanBtn" class="btn">🔍 Scan Page & Highlight Traps</button>
+  <div class="row">
+    <label>MODEL<select id="modelSelect"></select></label>
+    <label>EXPLAIN IN<select id="langSelect">
+      <option>English</option><option>Hindi</option><option>Hinglish</option><option>Tamil</option>
+      <option>Bengali</option><option>Marathi</option><option>Spanish</option><option>French</option>
+      <option>German</option><option>Japanese</option>
+    </select></label>
+  </div>
+
+  <div class="row">
+    <button id="scanBtn" class="btn">📜 Audit Terms</button>
+    <button id="visionBtn" class="btn alt">👁️ Scan Screen for Dark Patterns</button>
+  </div>
+  <div class="row">
+    <button id="optoutBtn" class="btn green">🚪 Find My Opt-Outs</button>
+  </div>
 
   <div id="resultArea" class="score-box">
-    <div style="font-size: 11px; color: #94a3b8; letter-spacing: 0.5px;">PRIVACY & FAIRNESS GRADE</div>
-    <div id="gradeText" class="grade">D</div>
-    <div id="summaryText" class="summary">High Risk — Multiple legal traps found</div>
+    <div id="resultLabel" style="font-size: 10.5px; color: #94a3b8; letter-spacing: .5px;">PRIVACY & FAIRNESS GRADE</div>
+    <div id="gradeText" class="grade">–</div>
+    <div id="summaryText" class="summary"></div>
+    <div id="metaText" class="meta"></div>
   </div>
 
   <div id="cardsContainer"></div>
 
-  <div class="footer">🔒 100% On-Device Analysis • Zero Cloud Data Leak</div>
-
+  <div class="footer">🔒 Runs on your device with open-weight Gemma 4 • nothing leaves your computer</div>
   <script src="popup.js"></script>
 </body>
 </html>
