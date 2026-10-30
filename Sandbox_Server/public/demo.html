@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickCart — Checkout & Terms of Service</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #f1f5f9; color: #0f172a; }
+    .top { background: #dc2626; color: #fff; font-weight: 700; text-align: center; padding: 10px; }
+    .wrap { max-width: 760px; margin: 22px auto; padding: 0 20px 120px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px 26px; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .line { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #e2e8f0; }
+    .buy { width: 100%; padding: 13px; background: #16a34a; color: #fff; font-size: 17px; font-weight: 700; border: 0; border-radius: 10px; margin-top: 12px; }
+    .no { display: block; text-align: center; margin-top: 7px; font-size: 11px; color: #94a3b8; }
+    .tiny { font-size: 9px; color: #cbd5e1; }
+    .terms { background: #fff; border-radius: 12px; padding: 10px 28px 20px; margin-top: 26px; font-family: Georgia, serif; line-height: 1.7; color: #334155; }
+    .terms h2 { font-family: system-ui, sans-serif; color: #0f172a; }
+    .cookie { position: fixed; bottom: 0; left: 0; right: 0; background: #0f172a; color: #e2e8f0; padding: 14px 24px; display: flex; align-items: center; gap: 16px; }
+    .cookie button { background: #22c55e; color: #fff; border: 0; padding: 11px 26px; font-weight: 700; border-radius: 8px; font-size: 15px; }
+    .cookie a { color: #475569; font-size: 10px; }
+  </style>
+</head>
+<body>
+  <div class="top">⏰ FLASH SALE ends in 01:59 — 52 people have this in their cart!</div>
+
+  <div class="wrap">
+    <!-- Dark patterns: visible on first screen for the 👁️ Scan Screen demo -->
+    <div class="card">
+      <h2 style="margin-top:0">Checkout</h2>
+      <div class="line"><span>Noise-Cancelling Headphones</span><span>₹3,499</span></div>
+      <div class="line"><span>Extended Warranty (added for you)</span><span>₹699</span></div>
+      <div class="line"><span>Platform &amp; handling fee</span><span>₹199</span></div>
+      <div style="margin-top:10px"><label><input type="checkbox" checked> Share my order history with our marketing partners</label></div>
+      <div><label><input type="checkbox" checked> Join QuickCart Plus — ₹249/month, renews automatically</label></div>
+      <button class="buy">Pay ₹4,397 now</button>
+      <a class="no" href="#">No thanks, I enjoy paying more</a>
+      <div class="tiny">By paying you accept our Terms below, including arbitration and a no-refund policy.</div>
+    </div>
+
+    <!-- Terms: for 📜 Audit Terms and 🚪 Find My Opt-Outs -->
+    <div class="terms">
+      <h2>QuickCart Terms of Service &amp; Privacy Policy</h2>
+      <p><strong>1. Data Collection:</strong> We automatically track your precise location, contacts and device identifiers, and we may sell or share this information with third-party advertising networks and data brokers.</p>
+      <p><strong>2. Your Content:</strong> By posting reviews, photos or videos you grant QuickCart a perpetual, irrevocable, royalty-free license to use and commercialize your content without compensation.</p>
+      <p><strong>3. Payments:</strong> All purchases and membership fees are non-refundable, and prices or fees may change at any time without notice.</p>
+      <p><strong>4. Disputes:</strong> You agree to mandatory binding arbitration and waive your right to join any class action lawsuit or jury trial.</p>
+      <p><strong>5. Data Security:</strong> We never store your full card number; payments are processed by a certified payment gateway and encrypted in transit.</p>
+
+      <h2>Your Privacy Choices</h2>
+      <p><strong>6. Marketing Messages:</strong> You may opt out of promotional emails, SMS and WhatsApp offers at any time by writing to <a href="mailto:privacy@quickcart.example">privacy@quickcart.example</a> with the subject "Unsubscribe".</p>
+      <p><strong>7. Personalized Ads:</strong> To opt out of personalized advertising and the sharing of your data with advertising partners, visit your <a href="/ad-preferences.html">Ad Preferences</a> page and switch off "Partner Sharing".</p>
+      <p><strong>8. AI Training:</strong> We may use your reviews and photos to train our AI models. Users may opt out of AI training by submitting a request to our support team.</p>
+      <p><strong>9. Grievance Officer:</strong> Ms. P. Iyer, Grievance Officer, can be reached at <a href="mailto:grievance@quickcart.example">grievance@quickcart.example</a>. Grievances are resolved within one month.</p>
+    </div>
+  </div>
+
+  <div class="cookie">
+    <span>We use cookies to improve your experience and for advertising with 900+ partners.</span>
+    <button>Accept all</button>
+    <a href="#">manage options</a>
+  </div>
+</body>
+</html>
